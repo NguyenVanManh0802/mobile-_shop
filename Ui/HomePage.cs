@@ -1,4 +1,5 @@
 ﻿using MobileShop.Ui.admin;
+using MobileShop.Ui.Employee;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,9 @@ namespace MobileShop.Ui
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            LoginEmployee   loginEmployee = new LoginEmployee();
+            loginEmployee.Show();
+            this.Hide();
         }
     }
 }

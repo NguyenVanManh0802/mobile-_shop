@@ -8,11 +8,12 @@ namespace MobileShop.models
 {
     internal class User
     {
+        public string userId {  get; set; } 
         public string UserName { get; set; }
         public string email { get; set; }
         public string Password { get; set; } // Đổi từ PWD để rõ nghĩa hơn
-        public string EmployeeName { get; set; }
+        public string numberPhone { get; set; }
         public string Address { get; set; }
-        public string MobileNumber { get; set; }
+        public string fullName { get; set; }
     }
 }

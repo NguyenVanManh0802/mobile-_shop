@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "D:\\Documents\\C#\\MobileShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|d:\\documents\\c#\\mobileshop\\ui\\employee\\registeremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\employee\\registeremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|d:\\documents\\c#\\mobileshop\\ui\\admin\\hompageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\admin\\hompageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\employee\\loginemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\employee\\loginemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\admin\\hompageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\admin\\hompageadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\dataaccesslayer\\admin\\companydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:dataaccesslayer\\admin\\companydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\admin\\hompageadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\admin\\hompageadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\dataaccesslayer\\admin\\mobiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:dataaccesslayer\\admin\\mobiledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\models\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:models\\mobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\dataaccesslayer\\admin\\employeedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:dataaccesslayer\\admin\\employeedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\employee\\registeremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\employee\\registeremployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\dataaccesslayer\\admin\\modeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:dataaccesslayer\\admin\\modeldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:models\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\admin\\loginadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\admin\\loginadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|D:\\Documents\\C#\\MobileShop\\ui\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCBE9576-8D50-4CCF-BE80-4533F82EB054}|MobileShop.csproj|solutionrelative:ui\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +70,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Mobile.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\models\\Mobile.cs",
+              "RelativeDocumentMoniker": "models\\Mobile.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\models\\Mobile.cs",
+              "RelativeToolTip": "models\\Mobile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:11:29.268Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HompageAdmin.Designer.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "Ui\\admin\\HompageAdmin.Designer.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.Designer.cs",
+              "RelativeToolTip": "Ui\\admin\\HompageAdmin.Designer.cs",
+              "ViewState": "AgIAAGoBAAAAAAAAAAAnwH4BAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T12:02:19.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MobileData.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\MobileData.cs",
+              "RelativeDocumentMoniker": "dataAccessLayer\\admin\\MobileData.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\MobileData.cs",
+              "RelativeToolTip": "dataAccessLayer\\admin\\MobileData.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAYwGgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T11:11:11.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeData.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\EmployeeData.cs",
+              "RelativeDocumentMoniker": "dataAccessLayer\\admin\\EmployeeData.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\EmployeeData.cs",
+              "RelativeToolTip": "dataAccessLayer\\admin\\EmployeeData.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAAAPUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T09:36:02.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HomePage.cs [Design]",
               "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\HomePage.cs",
               "RelativeDocumentMoniker": "Ui\\HomePage.cs",
               "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\HomePage.cs [Design]",
               "RelativeToolTip": "Ui\\HomePage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T11:19:12.818Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-02T10:56:33.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginEmployee.cs [Design]",
-              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\LoginEmployee.cs",
-              "RelativeDocumentMoniker": "Ui\\Employee\\LoginEmployee.cs",
-              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\LoginEmployee.cs [Design]",
-              "RelativeToolTip": "Ui\\Employee\\LoginEmployee.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T11:57:30.416Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-02T10:49:47.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterEmployee.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\RegisterEmployee.cs",
+              "RelativeDocumentMoniker": "Ui\\Employee\\RegisterEmployee.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\RegisterEmployee.cs",
+              "RelativeToolTip": "Ui\\Employee\\RegisterEmployee.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAawBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:46:43.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ModelData.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\ModelData.cs",
+              "RelativeDocumentMoniker": "dataAccessLayer\\admin\\ModelData.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\ModelData.cs",
+              "RelativeToolTip": "dataAccessLayer\\admin\\ModelData.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAgwKIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:40:25.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Model.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\models\\Model.cs",
+              "RelativeDocumentMoniker": "models\\Model.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\models\\Model.cs",
+              "RelativeToolTip": "models\\Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:39:44.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "companyData.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\companyData.cs",
+              "RelativeDocumentMoniker": "dataAccessLayer\\admin\\companyData.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\dataAccessLayer\\admin\\companyData.cs",
+              "RelativeToolTip": "dataAccessLayer\\admin\\companyData.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAqwKoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T09:18:22.293Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegisterEmployee.cs [Design]",
-              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\RegisterEmployee.cs",
-              "RelativeDocumentMoniker": "Ui\\Employee\\RegisterEmployee.cs",
-              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\Employee\\RegisterEmployee.cs [Design]",
-              "RelativeToolTip": "Ui\\Employee\\RegisterEmployee.cs [Design]",
+              "Title": "HompageAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.cs",
+              "RelativeDocumentMoniker": "Ui\\admin\\HompageAdmin.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.cs [Design]",
+              "RelativeToolTip": "Ui\\admin\\HompageAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T11:57:24.75Z",
+              "WhenOpened": "2025-07-02T08:54:36.923Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Company.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\models\\Company.cs",
+              "RelativeDocumentMoniker": "models\\Company.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\models\\Company.cs",
+              "RelativeToolTip": "models\\Company.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T16:19:14.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "loginAdmin.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\loginAdmin.cs",
+              "RelativeDocumentMoniker": "Ui\\admin\\loginAdmin.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\loginAdmin.cs",
+              "RelativeToolTip": "Ui\\admin\\loginAdmin.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:36:04.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HompageAdmin.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.cs",
+              "RelativeDocumentMoniker": "Ui\\admin\\HompageAdmin.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\admin\\HompageAdmin.cs",
+              "RelativeToolTip": "Ui\\admin\\HompageAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:35:53.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HomePage.cs",
+              "DocumentMoniker": "D:\\Documents\\C#\\MobileShop\\Ui\\HomePage.cs",
+              "RelativeDocumentMoniker": "Ui\\HomePage.cs",
+              "ToolTip": "D:\\Documents\\C#\\MobileShop\\Ui\\HomePage.cs",
+              "RelativeToolTip": "Ui\\HomePage.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAD4vxcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:45:59.173Z"
             }
           ]
         }

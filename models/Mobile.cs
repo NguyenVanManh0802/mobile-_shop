@@ -14,5 +14,6 @@ namespace MobileShop.models
         public string Status { get; set; }
         public DateTime Warranty { get; set; }
         public float Price { get; set; }
+        public string Image { get; set; }
     }
 }

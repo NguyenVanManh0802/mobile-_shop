@@ -81,12 +81,13 @@
             this.guna2ButtonLogin.Size = new System.Drawing.Size(349, 67);
             this.guna2ButtonLogin.TabIndex = 6;
             this.guna2ButtonLogin.Text = "LOGIN";
+            this.guna2ButtonLogin.Click += new System.EventHandler(this.guna2ButtonLogin_Click);
             // 
             // guna2TextBoxPassw
             // 
             this.guna2TextBoxPassw.BorderRadius = 25;
             this.guna2TextBoxPassw.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxPassw.DefaultText = "Password";
+            this.guna2TextBoxPassw.DefaultText = "";
             this.guna2TextBoxPassw.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBoxPassw.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxPassw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -99,7 +100,7 @@
             this.guna2TextBoxPassw.Location = new System.Drawing.Point(726, 356);
             this.guna2TextBoxPassw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxPassw.Name = "guna2TextBoxPassw";
-            this.guna2TextBoxPassw.PlaceholderText = "";
+            this.guna2TextBoxPassw.PlaceholderText = "Password";
             this.guna2TextBoxPassw.SelectedText = "";
             this.guna2TextBoxPassw.Size = new System.Drawing.Size(349, 54);
             this.guna2TextBoxPassw.TabIndex = 5;
@@ -109,7 +110,7 @@
             // 
             this.guna2TextBoxUserName.BorderRadius = 25;
             this.guna2TextBoxUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxUserName.DefaultText = "UserName";
+            this.guna2TextBoxUserName.DefaultText = "";
             this.guna2TextBoxUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBoxUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBoxUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -123,7 +124,7 @@
             this.guna2TextBoxUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBoxUserName.Name = "guna2TextBoxUserName";
             this.guna2TextBoxUserName.Padding = new System.Windows.Forms.Padding(10);
-            this.guna2TextBoxUserName.PlaceholderText = "";
+            this.guna2TextBoxUserName.PlaceholderText = "UserName";
             this.guna2TextBoxUserName.SelectedText = "";
             this.guna2TextBoxUserName.Size = new System.Drawing.Size(349, 57);
             this.guna2TextBoxUserName.TabIndex = 4;

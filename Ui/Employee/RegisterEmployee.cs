@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MobileShop.Ui.Employee
-{
+{   
     public partial class RegisterEmployee : Form
     {
         public RegisterEmployee()
@@ -18,6 +18,11 @@ namespace MobileShop.Ui.Employee
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ButtonLogin_Click(object sender, EventArgs e)
         {
 
         }
