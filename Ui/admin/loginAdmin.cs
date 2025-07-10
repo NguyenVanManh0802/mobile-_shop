@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MobileShop.Ui.Employee;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,14 @@ namespace MobileShop.Ui.admin
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        private void guna2btnQuayLai_Click(object sender, EventArgs e)
+        {
+
+            this.Hide(); // Ẩn form hiện tại
+            HomePage homepage = new HomePage(); // Tạo form đăng nhập
+            homepage.Show(); // Hiển thị form đăng nhập
         }
     }
 }

@@ -15,3 +15,43 @@ D:\Documents\C#\MobileShop\bin\Debug\Guna.UI2.dll
 D:\Documents\C#\MobileShop\obj\Debug\MobileShop.csproj.Up2Date
 D:\Documents\C#\MobileShop\obj\Debug\MobileShop.exe
 D:\Documents\C#\MobileShop\obj\Debug\MobileShop.pdb
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.csproj.AssemblyReference.cache
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Form1.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Properties.Resources.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.admin.HompageAdmin.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.admin.loginAdmin.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.Employee.HomePageEmployee.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.Employee.LoginEmployee.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.Employee.RegisterEmployee.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.HomePage.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.csproj.GenerateResource.cache
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.csproj.CoreCompileInputs.cache
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.exe
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.pdb
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\bin\Debug\MobileShop.exe.config
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\bin\Debug\MobileShop.exe
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\bin\Debug\MobileShop.pdb
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\bin\Debug\Guna.UI2.dll
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.csproj.Up2Date
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.Employee.forgot_password.resources
+C:\Users\trung\Downloads\MobileShop.Duczip\MobileShop\obj\Debug\MobileShop.Ui.Employee.ConfirmDetails.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\bin\Debug\MobileShop.exe.config
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\bin\Debug\MobileShop.exe
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\bin\Debug\MobileShop.pdb
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\bin\Debug\Guna.UI2.dll
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.csproj.AssemblyReference.cache
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Form1.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Properties.Resources.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.admin.HompageAdmin.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.admin.loginAdmin.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.Employee.ConfirmDetails.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.Employee.forgot_password.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.Employee.HomePageEmployee.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.Employee.LoginEmployee.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.Employee.RegisterEmployee.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.Ui.HomePage.resources
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.csproj.GenerateResource.cache
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.csproj.CoreCompileInputs.cache
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.csproj.Up2Date
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.exe
+C:\Users\tonym\Documents\Zalo Received Files\MobileShop\MobileShop\obj\Debug\MobileShop.pdb

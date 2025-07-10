@@ -1,5 +1,6 @@
 ﻿using MobileShop.dataAccessLayer.admin;
 using MobileShop.models;
+using MobileShop.Ui.Employee;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace MobileShop.Ui.admin
         // Biến để lưu trữ IMEI của Mobile đang được chọn
         private string _selectedMobileImeiNo = null; //
         private int _selectedEmployeeId = -1;
+
+        private string _selectedModelIdForStock = null; // MỚI: Biến này dùng để theo dõi ModelId được chọn trong Stock tab
         public HompageAdmin()
         {
             InitializeComponent();
@@ -75,6 +78,8 @@ namespace MobileShop.Ui.admin
         {
             panelStock.BringToFront();
             SetActiveLabel(lbStock);
+            LoadTransactionsData();
+            LoadModelsToStockComboBox();
         }
 
         private void lbEmployee_Click(object sender, EventArgs e)
@@ -561,8 +566,6 @@ namespace MobileShop.Ui.admin
             _selectedMobileImeiNo = null;
         }
 
-     
-      
         private void buttonAddMobile_Click_1(object sender, EventArgs e)
         {
             MobileData mobileDAL = new MobileData(); //
@@ -668,6 +671,279 @@ namespace MobileShop.Ui.admin
             {
                 MessageBox.Show("Vui lòng chọn một điện thoại để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); //
             }
+        }
+        // =====================================================================
+        // CÁC HÀM XỬ LÝ CHO STOCK / TRANSACTION
+        // =====================================================================
+
+        // Hàm để tải danh sách Model vào ComboBox cho Stock (guna2ComboBoxModelId)
+        private void LoadModelsToStockComboBox()
+        {
+            ModelData modelDAL = new ModelData();
+            try
+            {
+                List<Model> models = modelDAL.GetAllModels();
+                guna2ComboBoxModelId.DataSource = models; // Tên từ ảnh: guna2ComboBoxModellId
+                guna2ComboBoxModelId.DisplayMember = "ModelNum"; // Hiển thị số model
+                guna2ComboBoxModelId.ValueMember = "ModelId";   // Giá trị thực tế là mã model
+                guna2ComboBoxModelId.SelectedIndex = -1; // Chọn không có gì ban đầu
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading models for Stock ComboBox: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error loading models for Stock ComboBox: " + ex.Message);
+            }
+        }
+
+        // Hàm để tải dữ liệu Transaction vào DataGridViewStock
+        private void LoadTransactionsData()
+        {
+            transactionData transDAL = new transactionData(); // Khởi tạo Transaction DAL
+            try
+            {
+                List<Transaction> transactions = transDAL.GetAllTransactions();
+
+                // Tạo DataTable để thêm cột STT
+                DataTable dt = new DataTable();
+                dt.Columns.Add("STT", typeof(int));
+                dt.Columns.Add("Mã Giao dịch", typeof(string));
+                dt.Columns.Add("Mã Model", typeof(string));
+                dt.Columns.Add("Số lượng", typeof(int));
+                dt.Columns.Add("Ngày", typeof(DateTime));
+                dt.Columns.Add("Tổng tiền", typeof(float)); // Tên cột bạn muốn hiển thị
+                dt.Columns.Add("Loại Giao dịch", typeof(string)); // Cột loại giao dịch
+
+                int stt = 1;
+                foreach (Transaction trans in transactions)
+                {
+                    dt.Rows.Add(stt, trans.TransId, trans.ModelId, trans.Quantity, trans.Date, trans.Amount, trans.TransactionType);
+                    stt++;
+                }
+
+                dataGridViewStock.DataSource = dt; // Gán DataTable làm DataSource
+
+                // Tùy chỉnh hiển thị cột nếu cần (tên cột đã đặt trong DataTable)
+                dataGridViewStock.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading transaction data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error loading transaction data: " + ex.Message);
+            }
+        }
+
+        // Hàm để xóa trắng các trường nhập liệu Stock
+        private void ClearStockInputFields()
+        {
+            guna2ComboBoxModelId.SelectedIndex = -1; // Tên từ ảnh: guna2ComboBoxModellId
+            textBoxQuantity.Clear();
+            guna2DateTimePicker1.Value = DateTime.Now; // Tên từ ảnh: guna2DateTimePicker1
+            textBoxTotal.Clear(); // Tên từ ảnh: textBoxTotal
+            radioButtonSale.Checked = true; // Mặc định chọn Sale khi xóa
+            radioButtonPurchase.Checked = false;
+            _selectedModelIdForStock = null; // Reset biến theo dõi ModelId
+        }
+
+        // Sự kiện khi Model được chọn trong ComboBox của Stock
+        private void guna2ComboBoxModellId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (guna2ComboBoxModelId.SelectedValue != null)
+            {
+                _selectedModelIdForStock = guna2ComboBoxModelId.SelectedValue.ToString();
+            }
+            else
+            {
+                _selectedModelIdForStock = null;
+            }
+            UpdateCalculatedAmount(); // Cập nhật Amount khi Model thay đổi
+        }
+
+        // Sự kiện khi số lượng thay đổi
+        private void textBoxQuantity_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculatedAmount(); // Cập nhật Amount khi Quantity thay đổi
+        }
+
+        // Sự kiện khi RadioButton thay đổi (Sale/Purchase)
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            // Tùy chọn: Có thể cập nhật Amount nếu giá bán/nhập khác nhau, hoặc chỉ để đảm bảo tính toán lại
+            UpdateCalculatedAmount();
+        }
+
+
+        // Hàm tính toán và hiển thị Amount
+        private void UpdateCalculatedAmount()
+        {
+            if (_selectedModelIdForStock == null)
+            {
+                textBoxTotal.Text = string.Empty; // Xóa Amount nếu chưa chọn Model
+                return;
+            }
+
+            if (!int.TryParse(textBoxQuantity.Text.Trim(), out int quantity) || quantity <= 0)
+            {
+                textBoxTotal.Text = string.Empty; // Xóa Amount nếu Quantity không hợp lệ
+                return;
+            }
+
+            transactionData transDAL = new transactionData();
+            float modelPrice = transDAL.GetModelPrice(_selectedModelIdForStock);
+
+            if (modelPrice > 0)
+            {
+                float totalAmount = modelPrice * quantity;
+                textBoxTotal.Text = totalAmount.ToString("N0"); // Định dạng số cho dễ đọc, ví dụ: 1,000,000
+            }
+            else
+            {
+                textBoxTotal.Text = "0"; // Giá model không có
+            }
+        }
+
+
+       
+        // Sự kiện CellClick của DataGridViewStock (để hiển thị lên textbox khi chọn)
+        private void dataGridViewStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridViewStock.Rows[e.RowIndex];
+
+                // Lấy dữ liệu và điền vào các control
+                // string transId = row.Cells["Mã Giao dịch"].Value.ToString(); // Nếu bạn muốn hiển thị TransId
+                string modelId = row.Cells["Mã Model"].Value.ToString();
+                int quantity = Convert.ToInt32(row.Cells["Số lượng"].Value);
+                DateTime date = Convert.ToDateTime(row.Cells["Ngày"].Value);
+                float amount = Convert.ToSingle(row.Cells["Tổng tiền"].Value);
+                string transType = row.Cells["Loại Giao dịch"].Value.ToString();
+
+                guna2ComboBoxModelId.SelectedValue = modelId;
+                textBoxQuantity.Text = quantity.ToString();
+                guna2DateTimePicker1.Value = date;
+                textBoxTotal.Text = amount.ToString();
+
+                if (transType == "Sale")
+                {
+                    radioButtonSale.Checked = true;
+                }
+                else if (transType == "Purchase")
+                {
+                    radioButtonPurchase.Checked = true;
+                }
+
+                _selectedModelIdForStock = modelId; // Cập nhật ModelId đang chọn
+            }
+        }
+
+        private void buttonAddTr_Click(object sender, EventArgs e)
+        {
+            transactionData transDAL = new transactionData();
+
+            string modelId = null;
+            if (guna2ComboBoxModelId.SelectedValue != null)
+            {
+                modelId = guna2ComboBoxModelId.SelectedValue.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một Model.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int quantity = 0;
+            if (!int.TryParse(textBoxQuantity.Text.Trim(), out quantity) || quantity <= 0)
+            {
+                MessageBox.Show("Số lượng phải là một số nguyên dương hợp lệ.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            float amount = 0;
+            if (!float.TryParse(textBoxTotal.Text.Trim(), out amount) || amount < 0)
+            {
+                MessageBox.Show("Số tiền phải là một số hợp lệ (không âm).", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string transactionType = "";
+            if (radioButtonSale.Checked)
+            {
+                transactionType = "Sale";
+            }
+            else if (radioButtonPurchase.Checked)
+            {
+                transactionType = "Purchase";
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn loại giao dịch (Purchase hoặc Sale).", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Transaction newTransaction = new Transaction
+            {
+                ModelId = modelId,
+                Quantity = quantity,
+                Date = guna2DateTimePicker1.Value, // Tên từ ảnh: guna2DateTimePicker1
+                Amount = amount,
+                TransactionType = transactionType
+            };
+
+            if (transDAL.AddTransaction(newTransaction))
+            {
+                MessageBox.Show($"Giao dịch '{transactionType}' thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearStockInputFields(); // Xóa các trường sau khi thêm
+                LoadTransactionsData(); // Tải lại DataGridView Transaction
+                LoadModelsData(); // Cập nhật lại số lượng tồn kho trên tab Model
+            }
+            else
+            {
+                // Lỗi đã được hiển thị từ DAL
+            }
+        }
+        private void LoadSalesReport()
+        {
+            ReportData reportDAL = new ReportData();
+            try
+            {
+                DateTime dateFrom = dateTimePickerFrom.Value;
+                DateTime dateTo = dateTimePickerTo.Value;
+
+                DataTable salesReport = reportDAL.GetSalesReport(dateFrom, dateTo);
+
+                // Gán DataTable làm nguồn dữ liệu cho dataGridViewReport
+                dataGridViewReport.DataSource = salesReport;
+
+                // Tùy chỉnh hiển thị cột (HeaderText đã được đặt trong truy vấn SQL)
+                dataGridViewReport.Columns["STT"].HeaderText = "STT";
+                dataGridViewReport.Columns["TenKhachHang"].HeaderText = "Tên Khách hàng";
+                dataGridViewReport.Columns["TenSanPham"].HeaderText = "Tên Sản phẩm";
+                dataGridViewReport.Columns["GiaBan"].HeaderText = "Giá bán";
+                dataGridViewReport.Columns["NgayMua"].HeaderText = "Ngày mua hàng";
+                dataGridViewReport.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+                // Kiểm tra nếu không có dữ liệu
+                if (salesReport.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không tìm thấy dữ liệu bán hàng trong khoảng thời gian đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading sales report: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error loading sales report: " + ex.Message);
+            }
+        }
+        private void buttonLoadData_Click(object sender, EventArgs e)
+        {
+            LoadSalesReport();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Ẩn form hiện tại
+            loginAdmin loginForm = new loginAdmin(); // Tạo form đăng nhập
+            loginForm.Show(); // Hiển thị form đăng nhập
         }
     }
 }

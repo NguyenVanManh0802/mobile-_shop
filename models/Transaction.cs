@@ -13,5 +13,6 @@ namespace MobileShop.models
         public int Quantity { get; set; }
         public DateTime Date { get; set; }
         public float Amount { get; set; }
+        public string TransactionType { get; set; } 
     }
 }

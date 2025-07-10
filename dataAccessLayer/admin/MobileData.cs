@@ -68,8 +68,8 @@ namespace MobileShop.dataAccessLayer.admin
             mobile.ImeiNo = GenerateNewImeiNo(); // Tạo IMEI mới
 
             // Đảm bảo tên cột 'image' trùng khớp trong DB
-            string query = "INSERT INTO tbl_mobile (ImeiNo, ModelId, status, price, image) VALUES (@ImeiNo, @ModelId, @Status, @Price, @Image)";
-
+            string query = "INSERT INTO tbl_mobile (ImeiNo, ModelId, status, price, image,warranty) VALUES (@ImeiNo, @ModelId, @Status, @Price, @Image,@warranty)";
+            string warranty = "2026-07-04";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -78,6 +78,7 @@ namespace MobileShop.dataAccessLayer.admin
                     command.Parameters.AddWithValue("@ModelId", mobile.ModelId);
                     command.Parameters.AddWithValue("@Status", mobile.Status);
                     command.Parameters.AddWithValue("@Price", mobile.Price);
+                    command.Parameters.AddWithValue("@warranty", warranty);
                     // Nếu mobile.Image có thể null, dùng DBNull.Value
                     command.Parameters.AddWithValue("@Image", (object)mobile.Image ?? DBNull.Value);
 
@@ -127,11 +128,13 @@ namespace MobileShop.dataAccessLayer.admin
                                 {
                                     ImeiNo = reader["ImeiNo"].ToString(),
                                     ModelId = reader["ModelId"].ToString(),
-                                    Status = reader["status"].ToString(),
-                                    Price = Convert.ToSingle(reader["price"]), // Đọc giá là float
-                                    Image = reader["image"] == DBNull.Value ? null : reader["image"].ToString()
-                                    // Warranty không có trong schema bạn cung cấp, nếu có thì thêm vào đây
-                                    // Warranty = Convert.ToDateTime(reader["Warranty"])
+                                    // SỬA LỖI Ở ĐÂY CHO CỘT 'Status'
+                                    Status = reader["status"] == DBNull.Value ? null : reader["status"].ToString(),
+
+                                    // SỬA LỖI Ở ĐÂY CHO CỘT 'Price'
+                                    Price = reader["price"] == DBNull.Value ? 0 : Convert.ToSingle(reader["price"]), // Nếu NULL, gán 0 hoặc giá trị mặc định
+
+                                    Image = reader["image"] == DBNull.Value ? null : reader["image"].ToString(),                            
                                 };
                                 mobiles.Add(mobile);
                             }

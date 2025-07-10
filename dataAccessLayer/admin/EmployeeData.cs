@@ -11,7 +11,8 @@ namespace MobileShop.dataAccessLayer.admin
 {
     internal class EmployeeData
     {
-        private string connectionString = "Data Source=NGUYENMANH;Initial Catalog=mobileShop;Integrated Security=True";
+        private string connectionString = "Data Source=NGUYENMANH;Initial Catalog = mobileShop; Integrated Security = True";
+
 
         // Phương thức để lấy UserId lớn nhất hiện có
         private string GetMaxUserId()

@@ -41,6 +41,35 @@ namespace MobileShop.dataAccessLayer.admin
             }
             return maxId;
         }
+        public string GetModelNumById(string modelId)
+        {
+            string modelNum = null;
+            string query = "SELECT modelNum FROM tbl_model WHERE modelId = @ModelId";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ModelId", modelId);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        if (result != DBNull.Value && result != null)
+                        {
+                            modelNum = result.ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error getting ModelNum by ID: " + ex.Message);
+                        // Bạn có thể chọn hiển thị MessageBox ở đây hoặc chỉ log lỗi
+                        // MessageBox.Show("Lỗi khi lấy tên Model: " + ex.Message, "Lỗi Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            return modelNum;
+        }
 
         // Phương thức để tạo ID Model mới
         private string GenerateNewModelId()

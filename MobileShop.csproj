@@ -56,6 +56,10 @@
     <Compile Include="dataAccessLayer\admin\EmployeeData.cs" />
     <Compile Include="dataAccessLayer\admin\MobileData.cs" />
     <Compile Include="dataAccessLayer\admin\ModelData.cs" />
+    <Compile Include="dataAccessLayer\admin\ReportData.cs" />
+    <Compile Include="dataAccessLayer\admin\transactionData.cs" />
+    <Compile Include="dataAccessLayer\employee\MobileDAL.cs" />
+    <Compile Include="dataAccessLayer\employee\SaleDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +86,24 @@
     </Compile>
     <Compile Include="Ui\admin\loginAdmin.Designer.cs">
       <DependentUpon>loginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\Employee\ConfirmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Employee\ConfirmDetails.Designer.cs">
+      <DependentUpon>ConfirmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\Employee\forgot_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Employee\forgot_password.Designer.cs">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\Employee\HomePageEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Employee\HomePageEmployee.Designer.cs">
+      <DependentUpon>HomePageEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Ui\Employee\LoginEmployee.cs">
       <SubType>Form</SubType>
@@ -120,6 +142,15 @@
     <EmbeddedResource Include="Ui\admin\loginAdmin.resx">
       <DependentUpon>loginAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ui\Employee\ConfirmDetails.resx">
+      <DependentUpon>ConfirmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\Employee\forgot_password.resx">
+      <DependentUpon>forgot_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\Employee\HomePageEmployee.resx">
+      <DependentUpon>HomePageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ui\Employee\LoginEmployee.resx">
       <DependentUpon>LoginEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +174,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dataAccessLayer\employee\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="assets\images\estd 1943.png" />
   </ItemGroup>

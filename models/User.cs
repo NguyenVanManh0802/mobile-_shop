@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MobileShop.models
 {
-    internal class User
+    public class User
     {
         public string userId {  get; set; } 
         public string UserName { get; set; }
